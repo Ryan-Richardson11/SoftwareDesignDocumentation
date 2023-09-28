@@ -17,7 +17,7 @@ public class StackReader {
     void addAll(String allValues, Stack<Integer> stack) {
         String[] splitString = allValues.split(" ");
         for (int i = 0; i < splitString.length; i++) {
-            stack.add(Integer.parseInt(splitString[i]));
+            stack.push(Integer.parseInt(splitString[i]));
         }
         // Sorts linked list.
         Collections.sort(stack);
