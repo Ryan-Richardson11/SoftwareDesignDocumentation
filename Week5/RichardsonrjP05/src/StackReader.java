@@ -3,23 +3,23 @@ import java.util.Scanner;
 import java.util.Collections;
 
 /**
- * LinkedListReader class, contains methods to read an input for a linked list.
+ * StackReader class, contains methods to read an input for a Stack.
  */
 public class StackReader {
 
     /**
-     * addAll method, takes an input as a parameter and converts it to a sorted
-     * linked list.
+     * addAll method, takes an input as a parameter, pushes it on to the stack,
+     * and converts it to a sort stack.
      * 
      * @param allValues  Values inputted by the user
-     * @param linkedList linked list created from java collections.
+     * @param stack stack created from java collections.
      */
     void addAll(String allValues, Stack<Integer> stack) {
         String[] splitString = allValues.split(" ");
         for (int i = 0; i < splitString.length; i++) {
             stack.push(Integer.parseInt(splitString[i]));
         }
-        // Sorts linked list.
+        // Sorts stack.
         Collections.sort(stack);
     }
 
