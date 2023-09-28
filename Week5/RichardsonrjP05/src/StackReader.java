@@ -21,7 +21,7 @@ public class StackReader {
         for (String value : splitString) {
             arr.add(Integer.parseInt(value));
         }
-        // Sorts stack.
+        // Sorts an array to be pushed to the stack.
         Collections.sort(arr);
         for (int i = 0; i < arr.size(); i++){
             stack.push(arr.get(i));
