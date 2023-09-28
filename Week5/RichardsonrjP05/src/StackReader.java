@@ -1,6 +1,7 @@
 import java.util.Stack;
 import java.util.Scanner;
 import java.util.Collections;
+import java.util.ArrayList;
 
 /**
  * StackReader class, contains methods to read an input for a Stack.
@@ -15,12 +16,16 @@ public class StackReader {
      * @param stack stack created from java collections.
      */
     void addAll(String allValues, Stack<Integer> stack) {
+        ArrayList<Integer> arr = new ArrayList<>();
         String[] splitString = allValues.split(" ");
-        for (int i = 0; i < splitString.length; i++) {
-            stack.push(Integer.parseInt(splitString[i]));
+        for (String value : splitString) {
+            arr.add(Integer.parseInt(value));
         }
         // Sorts stack.
-        Collections.sort(stack);
+        Collections.sort(arr);
+        for (int i = 0; i < arr.size(); i++){
+            stack.push(arr.get(i));
+        }
     }
 
     public static void main(String[] args) {
