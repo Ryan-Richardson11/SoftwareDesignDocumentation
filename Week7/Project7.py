@@ -10,11 +10,13 @@ def guess():
 def isPrime(x):
     """
     isPrime(): Takes an integer input.
-    Checks for a remainder in range(2, x), returns True if divisor is found.
+    Checks for a remainder in range(3, x), returns True if divisor is found.
     """
-    if x <= 1:
+    if x == 2:
+        return True
+    if x <= 1 or x % 2 == 0:
         return False
-    for i in range(2, x):
+    for i in range(3, x):
         if (x % i) == 0:
             return False
     return True
@@ -45,4 +47,12 @@ def isPrime(x):
         for j in range(x):
             if i * j == x:
                 return False
+    return True
+
+def isPrime(x):
+    if x <= 1:
+        return False
+    for i in range(2, x):
+        if (x % i) == 0:
+            return False
     return True
