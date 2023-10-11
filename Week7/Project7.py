@@ -1,4 +1,5 @@
 import random
+import cProfile
 
 def guess():
     return random.randint(2, 5000)
@@ -19,5 +20,4 @@ def findPrimes(num):
         primes += [p]
     return primes
 
-import cProfile
 cProfile.run('print(findPrimes(500)[:10])')
