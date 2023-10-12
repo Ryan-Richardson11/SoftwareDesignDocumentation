@@ -40,20 +40,3 @@ def findPrimes(num):
 cProfile.run('print(findPrimes(100)[:10])')
 print("Complete.")
 
-
-# Old Version 1
-def isPrime(x):
-    for i in range(x):
-        for j in range(x):
-            if i * j == x:
-                return False
-    return True
-
-# Old Version 2
-def isPrime(x):
-    if x <= 1:
-        return False
-    for i in range(2, x):
-        if (x % i) == 0:
-            return False
-    return True
