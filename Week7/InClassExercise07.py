@@ -10,5 +10,7 @@ def bubbleSort(a):
                 print("Error at i =", i)
                 break
 
+# Testcase
 a = [3, 5, 2, 65, 3, 6, 3, 8, 1, 5]
 bubbleSort(a)
+print(a)

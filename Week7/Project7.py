@@ -41,7 +41,7 @@ cProfile.run('print(findPrimes(100)[:10])')
 print("Complete.")
 
 
-# Old
+# Old Version 1
 def isPrime(x):
     for i in range(x):
         for j in range(x):
@@ -49,6 +49,7 @@ def isPrime(x):
                 return False
     return True
 
+# Old Version 2
 def isPrime(x):
     if x <= 1:
         return False
